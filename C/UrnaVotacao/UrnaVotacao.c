@@ -43,5 +43,26 @@ int main()
         }
     }
     
-    printf("Total dos votos:\nAntonio: %d\nJosé: %d\nMaria: %d\nBranco: %d\nNulo: %d\n", antonio, jose, maria, branco, nulo);
+    int total_votos=antonio+jose+maria+branco+nulo;
+    char candidato_antonio[]="Antonio";
+    char candidato_jose[]="José";
+    char candidato_maria[]="Maria";
+    int votos[3]={antonio, jose, maria};
+
+    printf("Total de eleitores: %d\n", total_votos);
+
+    if (votos[0]>votos[1]&&votos[0]>votos[2]){
+        printf("Vencedor: %s\n\n", candidato_antonio);
+    } else if (votos[1]>votos[0]&&votos[1]>votos[2]) {
+        printf("Vencedor: %s\n\n", candidato_jose);
+    }else if (votos[2]>votos[0]&&votos[2]>votos[1]) {
+        printf("Vencedor: %s\n\n", candidato_maria);
+    }else {
+        printf("VOTAÇÃO EM SEGUNDO TURNO\n\n");
+    }   
+    
+    printf("Total dos votos de cada candidato:\nAntonio: %d\nJosé: %d\nMaria: %d\nBranco: %d\nNulo: %d\n", antonio, jose, maria, branco, nulo);    
+ 
+    
+
 }
